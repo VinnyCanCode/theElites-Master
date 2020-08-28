@@ -1,0 +1,31 @@
+.wishlist {
+    grid-column: col-start / col-end;
+
+    padding: 5rem 0rem 10rem 0rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+        grid-gap: 5rem;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-phone-1) {
+            grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+}

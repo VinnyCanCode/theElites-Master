@@ -1,0 +1,167 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.home {
+    grid-column: col-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2rem;
+
+    padding: 1rem 3rem 1rem 0rem;
+
+    &__ad {
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0rem 0rem 1rem rgba($color-grey-dark-2, .3);
+        position: relative;
+
+
+        &--one {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            background: url('../../imgs/ads/newItems.gif') 0% 0% / 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            h4 {
+                font-size: 5rem;
+                font-weight: 400;
+                color: black;
+                text-align: center;
+                background-color: white;
+                margin-top: 4rem;
+            }
+        }
+
+        // &--two {
+        //     grid-column: 1 / span 2;
+        //     background: url('/imgs/ads/adTwo.jpg') 100% 15% / 100% no-repeat;
+        // }
+
+        &--three {
+            grid-row: 1 / span 2;
+            grid-column: 3 / span 1;
+            background: url('../../imgs/ads//lxcon94.jpg') 100% 200% / 101% no-repeat;
+            filter: brightness(110%);
+
+            h4 {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                text-align: center;
+                height: 100%;
+
+                font-size: 1.7rem;
+                font-weight: 500;
+                padding-bottom: 2rem;
+                line-height: 2rem;
+            }
+        }
+
+        &--four {
+            grid-row: 1 / span 2;
+            grid-column: 4 / span 1;
+            background: url('../../imgs/ads//joggers.jpeg') 100% 110% / 150% no-repeat;
+            filter: brightness(110%);
+
+            h4 {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                text-align: center;
+                height: 100%;
+
+                font-size: 1.7rem;
+                font-weight: 500;
+                padding-bottom: 2rem;
+                line-height: 2rem;
+            }
+        }
+
+        &--five {
+            grid-row: 3 / span 2;
+            grid-column: 1 / span 1;
+            background: url('../../imgs/ads//hypbeastOne.jpg') 0% 0% / 100% no-repeat;
+
+        }
+
+        &--six {
+            grid-row: 3 / span 2;
+            grid-column: 2 / span 1;
+            background: url('../../imgs/ads//adTwo.jpg') 35% 30% / 200% no-repeat;
+            // transform: rotate(180deg);
+            transform: scaleX(-1);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        &--sixWords {
+            display: inline-block;
+            transform: scaleX(-1);
+            background-color: #eeb605;
+            text-align: center;
+            width: 100%;
+            color: #F9F9F9;
+
+
+            h4 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 2.3rem;
+                font-weight: 500;
+            }
+        }
+
+        &--seven {
+            grid-row: 3 / span 1;
+            grid-column: 3 / span 2;
+            background: rgb(245, 245, 245) url('../../imgs/ads//react-infinity-ad.jpg') 0% 60% / 60% no-repeat;
+
+            h4 {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+
+                font-size: 2.5rem;
+                font-weight: 600;
+                padding-right: 2rem;
+
+            }
+        }
+
+        &--eight {
+            grid-row: 4 / span 1;
+            grid-column: 3 / span 2;
+            background: rgb(146, 220, 229) url('../../imgs/ads//3amigos.jpg') 220% 11% /90% no-repeat;
+
+            h4 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                height: 100%;
+
+                font-size: 3rem;
+                font-weight: 800;
+                letter-spacing: .1rem;
+                padding-left: 2rem;
+                color: white;
+            }
+        }
+    }
+
+
+}

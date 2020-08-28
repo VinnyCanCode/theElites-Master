@@ -1,0 +1,232 @@
+.filter {
+    grid-column: col-start / col-end;
+
+    background-color: white;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: col-start / col-end;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 100;
+
+        margin-bottom: .5rem;
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: row;
+
+        list-style: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(10px, 145px));
+            grid-gap: none;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 2rem;
+            }
+
+            &:not(:last-child) {
+                margin-right: 0rem;
+            }
+        }
+    }
+
+    &__navButton {
+        width: 12rem;
+        height: 4rem;
+        // padding: .5rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: white;
+        border: $buttonBorder;
+        outline: none;
+        cursor: pointer;
+
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        &:hover {
+            color: white;
+            background-color: $color-pink-logo;
+        }
+    }
+
+    &__item--selected>&__navButton--men {
+        z-index: 1;
+        background-color: $color-skyblue-1;
+    }
+
+    &__item--selected>&__navButton--women {
+        z-index: 1;
+        background-color: $color-skyblue-1;
+    }
+
+    &__item--selected>&__navButton--women,
+    &__item--selected>&__navButton--men {
+        border-color: black;
+    }
+
+
+    &__icon svg {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 2rem;
+    }
+
+
+    &__icon--arrow svg,
+    &__icon--arrow-open svg {
+        height: 1.7rem;
+        width: 1.7rem;
+        margin-left: 2rem;
+    }
+
+    &__icon--arrow-open svg {
+        transform: rotate(180deg);
+    }
+
+
+    // FILTER BUTTON ON PRODUCTS PAGE
+    &__filterCount {
+        font-size: 1.7rem;
+        margin-right: 1rem;
+        background-color: black;
+        padding: .5rem 1rem;
+        border-radius: 50%;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__menu {
+        background-color: $color-grey-dark-3;
+        color: white;
+        border-radius: 5px;
+        height: 165px;
+        width: 250px;
+        position: absolute;
+        right: 0;
+        overflow: hidden;
+        z-index: 1;
+
+        a {
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            left: 0;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            left: initial;
+            right: 35px;
+        }
+    }
+
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        overflow: hidden;
+        position: absolute;
+
+        transition: height 500ms ease;
+
+        &--primary-enter {
+            position: absolute;
+            transform: translateX(-110%);
+        }
+
+        &--primary-enter-active {
+            transform: translateX(0%);
+            transition: all 300ms ease;
+        }
+
+        &--primary-exit {
+            position: absolute;
+        }
+
+        &--primary-exit-active {
+            transform: translateX(-110%);
+            transition: all 300ms ease;
+        }
+
+        // SECONDARY MENU 
+
+        &--secondary-enter {
+            position: absolute;
+            transform: translateX(110%);
+        }
+
+        &--secondary-enter-active {
+            transform: translateX(0%);
+            transition: all 300ms ease;
+        }
+
+        &--secondary-exit {
+            position: absolute;
+        }
+
+        &--secondary-exit-active {
+            transform: translateX(110%);
+            transition: all 300ms ease;
+        }
+    }
+
+    &__colorForm {
+        display: grid;
+    }
+
+    &__dropdownItem {
+        cursor: pointer;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: .5rem;
+        border-radius: 5px;
+
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        z-index: 1;
+
+        &:hover {
+            background-color: $color-grey-dark-2;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        &--selected {
+            background-color: $loggedIn;
+        }
+    }
+
+}

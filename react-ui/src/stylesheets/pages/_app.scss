@@ -1,0 +1,8 @@
+.app {
+    display: grid;
+    // grid-template-rows: 22.5vh 10vh 77vh;
+    grid-template-columns: [full-start] 7vw [col-start] 43vw [mid] 43vw [col-end] 7vw [full-end];
+
+    height: 100vh;
+    width: 100vw;
+}

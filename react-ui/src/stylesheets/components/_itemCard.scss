@@ -1,0 +1,87 @@
+.itemCard {
+    display: grid;
+    grid-template-rows: 50vh 20vh;
+    border: $itemCardBorder;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: border .2s ease-in-out;
+
+    &:hover {
+        border: $buttonBorder;
+    }
+
+    &__top {
+        grid-row: 1 / span 1;
+        height: 100%;
+        overflow: hidden;
+        animation: fadeIn .3s ease-in-out;
+
+        position: relative;
+
+        &:hover {
+            animation: contactTitle .3s ease-in-out;
+        }
+
+    }
+
+    &__img {}
+
+    &__bottom {
+        grid-row: 2 / span 1;
+    }
+
+    &__list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.7rem;
+
+        &--1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        &--2 {
+            font-weight: 300;
+            font-size: 1.8rem;
+        }
+
+        &--3 {
+            color: $color-grey-dark-2;
+        }
+
+        &--4 {
+            color: $color-grey-dark-2;
+        }
+    }
+
+    &__wishlist {
+        display: flex;
+        justify-content: space-evenly;
+        // z-index: 1;
+
+        &--button {
+            font-size: 1.3rem;
+            padding: 1rem;
+            margin: 1rem;
+            border: $buttonBorder;
+            border-radius: 5px;
+
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                background-color: $loggedOut;
+                color: white;
+            }
+        }
+    }
+}

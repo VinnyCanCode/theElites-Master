@@ -1,0 +1,198 @@
+.openMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    height: 100%;
+    width: 60vw;
+    border-top-right-radius: 0px 1px;
+    border-bottom-right-radius: 500px;
+    background-color: #141414;
+    color: white;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: none;
+
+    animation: openMenu .5s ease;
+
+    @media only screen and (max-width: $bp-medium) {
+        border-bottom-right-radius: 0px;
+        width: 80vw;
+    }
+
+    @media only screen and (max-width: $bp-phone-1) {
+        width: 100vw;
+    }
+
+
+    &__top {
+        grid-column: 1 / span 6;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 10vh;
+        list-style: none;
+        font-size: 1.3rem;
+        animation: openMenuItems .5s ease;
+
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / span 5;
+        }
+
+        &--left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-left: 2rem;
+            }
+        }
+
+        &--right {
+            grid-column: 3 / span 2;
+
+            display: flex;
+            align-items: center;
+
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+
+            &>* {
+                cursor: pointer;
+            }
+        }
+
+        &--shop {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: .5rem;
+            border: 1px solid transparent;
+
+            h3 {
+                font-size: 1.7rem;
+                font-weight: 100;
+
+                @media only screen and (max-width: $bp-medium) {
+                    font-size: 1.3rem;
+                }
+
+
+                @media only screen and (max-width: $bp-phone-1) {
+                    font-size: 2rem;
+                }
+            }
+
+            &:hover {
+                border: $itemCardBorder;
+            }
+        }
+
+        &--divide {
+            margin: 0rem 1rem;
+            font-size: 3rem;
+            padding: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: -2rem 0;
+                transform: rotate(90deg);
+            }
+        }
+
+        &--account {
+            border: 1px solid transparent;
+            font-size: 1.5rem;
+
+            @media only screen and (max-width: $bp-phone-1) {
+                font-size: 2rem;
+            }
+        }
+
+        &--shop,
+        &--account {
+            padding: .5rem;
+            border: 1px solid transparent;
+            transition: border .2s ease-in-out;
+            border-radius: 5px;
+
+
+            &:hover {
+                border: $itemCardBorder;
+            }
+        }
+    }
+
+    &__closeIcon {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__shopIcon {
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-right: 1.5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+
+    &__bottom {
+        height: 30vh;
+        grid-column: 2 / span 2;
+        list-style: none;
+        font-size: 4rem;
+        animation: openMenuItems .5s ease;
+
+        li {
+            display: block;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: .4s all;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(white, .8) 50%);
+            background-size: 220%;
+
+            @media only screen and (max-width: $bp-largest) {
+                font-size: 3rem;
+            }
+
+            &:hover {
+                background-position: -60%;
+                color: black;
+                transform: translateX(1rem);
+
+                @media only screen and (max-width: $bp-largest) {
+                    background-position: -85%;
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                    background-position: -95%;
+                }
+
+
+            }
+        }
+    }
+
+    &__currentUrl {
+        color: $color-pink-logo;
+
+        &:hover {
+            color: $color-pink-logo !important;
+            background-position: 0% !important;
+            transform: translateX(0rem) !important;
+        }
+
+    }
+}

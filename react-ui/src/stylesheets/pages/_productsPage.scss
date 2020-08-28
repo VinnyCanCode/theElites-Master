@@ -1,0 +1,14 @@
+.productsPage {
+    grid-column: col-start / col-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    grid-gap: .5rem;
+    justify-content: center;
+
+    margin: 5rem 0;
+
+    @media only screen and (max-width: $bp-phone-1) {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
+    }
+}

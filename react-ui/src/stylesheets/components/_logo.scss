@@ -1,0 +1,38 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__pic {
+        display: flex;
+        width: 100%;
+    }
+
+    img {
+        transform: scale(.5);
+        filter: brightness(1);
+        padding: 1.5rem;
+        border: 5px solid $color-pink-logo;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .2s all ease-in-out;
+
+        &:hover {
+            background-color: $color-pink-logo-2;
+            border-color: $color-pink-logo-2;
+            transform: scale(.5) rotate(30deg);
+        }
+    }
+
+    &--homeHeader {
+        transform: scale(1.3);
+
+        @media only screen and (max-width: $bp-largest) {
+            display: none;
+        }
+    }
+
+    &--header {
+        padding-left: 4rem;
+    }
+}

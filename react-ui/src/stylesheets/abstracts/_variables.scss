@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+// COLOR VARIABLES
+
+// Grey Light
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+// Grey Dark
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+
+$color-white: #ffff;
+$color-black: #000;
+$color-black-2: #171722;
+$color-black-3: #23232f;
+
+
+$color-pink-logo: #FFB6C1;
+$color-pink-logo-2: #fad7dc;
+$color-gold: #eeb605;
+$loggedIn: #35CE8D;
+$loggedOut: #1E91D6;
+$color-skyblue-1: #7EE8FA;
+$color-skyblue-2: #bce7ef;
+$color-turquoise: #78FECF;
+
+// FONT VARIABLES 
+$font-primary: 'Spectral',
+'Rubik',
+'sans-serif';
+$font-secondary: 'Montserrat',
+sans-serif,
+;
+// 400 regular; 500 medium; 800 extra-bold
+
+
+// BOX SHADOW 
+$boxShadow-1: 0rem 0rem 1rem rgba($color-grey-dark-2, .5);
+$boxShadow-2: 0rem 0rem .5rem rgba($color-grey-dark-2, .5);
+$boxShadow-3: 0rem 0rem .2rem rgba($color-grey-dark-2, .5);
+
+
+// ITEM CARD BORDER
+$itemCardBorder: 1px solid $color-grey-light-2;
+$buttonBorder: 1px solid $color-grey-dark-2;
+$buttonBorder-2: 1px solid rgb(181, 181, 181);
+
+// TEST NAVBAR 
+$nav-size: 35px;
+
+// TEST BORDER 
+$borderTest: 1px solid red;
+
+// RESPONSIVE BREAKPOINTS 
+$bp-largest: 78rem; // 1250px
+$bp-larger: 64.06rem; // 1025px
+$bp-large: 57.5rem; // 920px
+$bp-medium: 45.31rem; // 725px
+$bp-medium-2: 40.31rem; // 645px
+$bp-phone-1: 26.56rem // 425px

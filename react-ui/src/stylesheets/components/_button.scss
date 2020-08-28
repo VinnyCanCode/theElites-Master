@@ -1,0 +1,158 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+.button {
+    height: 5vh;
+    width: 15vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    &__itemDetail {
+        width: 75%;
+
+
+        border-radius: 5px;
+        border: $buttonBorder;
+        position: relative;
+        font-size: 2rem;
+
+        grid-column: 1 / span 2;
+        justify-self: center;
+        align-self: center;
+
+        transition: border .2s ease-in-out;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+
+        }
+
+        &:hover {
+            border: 3px solid $loggedIn
+        }
+
+        &--selected {
+            color: white;
+            background-color: $loggedIn;
+            border: none;
+        }
+
+    }
+
+    &__size {
+        height: 5rem;
+        width: 5rem;
+
+        border-radius: 5px;
+        border: $buttonBorder-2;
+
+        margin-bottom: 1.3rem;
+
+        transition: border .2s ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: .8rem;
+        }
+
+        &:hover {
+            border: 3px solid $color-gold;
+        }
+
+    }
+
+    &__editInfo {
+        border-radius: 5px;
+        border: 2px solid $loggedIn;
+        transition: .2s all ease;
+        width: 75%;
+
+        margin-bottom: 2rem;
+
+        &:hover {
+            color: white;
+            background-color: $loggedIn;
+        }
+    }
+
+    &__allProductsLink {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+
+        grid-column: 1 / -1;
+        grid-row: 13 / span 2;
+        margin-bottom: 10rem;
+        border-radius: 50%;
+        padding: 7rem;
+        border: 10px solid transparent;
+        box-shadow: $boxShadow-1;
+        transition: all ease-in-out .2s;
+
+        a,
+        Link {
+
+            &:visited,
+            &:link,
+            &:active {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+            border: 10px solid $loggedIn;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: -1 / span 1;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        justify-self: center;
+        align-items: center;
+
+        grid-column: 1 / -1;
+        grid-row: 13 / span 2;
+        margin-bottom: 10rem;
+        border-radius: 50%;
+        padding: 7rem;
+        border: 10px solid transparent;
+        box-shadow: $boxShadow-1;
+        transition: all ease-in-out .2s;
+
+        &:hover {
+            text-decoration: underline;
+            border: 10px solid $loggedIn;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-row: none;
+            margin: -15rem;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            margin-top: 5rem;
+            margin: -15rem;
+        }
+
+    }
+}

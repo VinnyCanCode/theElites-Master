@@ -1,0 +1,239 @@
+.homeHeader {
+    grid-column: col-start / col-end;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    height: 14.2vh;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: $bp-phone-1) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h1,
+    &__centerLogo {
+        font-weight: 100;
+        grid-column: 2 / span 2;
+
+        text-align: center;
+
+        @media only screen and (max-width: $bp-phone-1) {
+            grid-column: 2 / span 2;
+        }
+    }
+
+
+    h3,
+    h4 {
+        font-weight: 500;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        grid-column: 1 / span 1;
+
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+
+        font-size: 1.3rem;
+
+        h4 {
+            margin-right: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            h4 {
+                display: none;
+            }
+        }
+    }
+
+    &__menuIcon {
+        height: 4rem;
+        width: 4rem;
+        margin-right: 1.3rem;
+        cursor: pointer;
+
+        border: 3px solid white;
+        border-radius: 50%;
+        padding: .5rem;
+
+        transition: border .2s ease;
+
+        &:hover {
+            border: 3px solid $color-grey-dark-2;
+            background-color: white;
+        }
+    }
+
+    &__rightCorner {
+        grid-column: 4 / span 1;
+
+        display: flex;
+
+        a,
+        Link {
+            color: black;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            justify-content: center;
+        }
+    }
+
+    &__shop {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.5rem;
+        font-weight: 100;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width: $bp-phone-1) {
+            h3 {
+                display: none;
+            }
+        }
+    }
+
+    &__shopIcon {
+        height: 4rem;
+        width: 4rem;
+        margin-right: .5rem;
+
+        border: 1px solid transparent;
+        padding: .5rem;
+        background-color: black;
+        border-radius: 100%;
+
+        &--img {
+            transform: scale(.65);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 4rem;
+            width: 4rem;
+            padding: .3rem;
+        }
+    }
+
+    &__search,
+    &__cartIcon {
+
+        &--img {
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    &__search {
+        width: 100%;
+
+        position: relative;
+
+
+        &--input {
+            width: 80%;
+            font-size: 1.5rem;
+            outline: none;
+            border: none;
+
+            border-bottom: 2px solid $color-grey-dark-1;
+            transition: all .2s ease-in-out;
+
+            &:focus {
+                border-bottom: 2px solid $loggedIn;
+                width: 100%;
+            }
+        }
+
+        &--img {
+            position: absolute;
+            top: 0px;
+            right: 20%;
+            transition: all .2s ease-in-out;
+            height: 15px;
+
+            @media only screen and (max-width:$bp-phone-1) {
+                display: none;
+            }
+        }
+
+        &--input:focus+&--img {
+            opacity: 0;
+        }
+
+        &--list {
+            position: absolute;
+            top: 25px;
+            left: 0;
+            z-index: 1;
+            background-color: white;
+            list-style: none;
+        }
+
+        &--item {
+            word-wrap: break;
+            margin-bottom: .75rem;
+            z-index: 1;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all .2s ease-in-out;
+            padding: .5rem .3rem;
+
+            &:hover {
+                border: 2px solid $loggedIn;
+            }
+        }
+    }
+
+
+    &__cartIcon {
+        margin-left: 1.5rem;
+        position: relative;
+
+
+        @media only screen and (max-width:$bp-phone-1) {
+            margin-left: 0rem;
+        }
+
+        &--quantity {
+            position: absolute;
+            border: 50%;
+            top: -12px;
+            left: 14px;
+            font-size: 1.5rem;
+            padding: .1rem .6rem;
+            background-color: $color-grey-dark-1;
+            color: white;
+            border-radius: 50%;
+
+            transition: transform .1s ease-in-out;
+        }
+
+        &:hover {
+
+            svg {
+                fill: $color-grey-dark-1
+            }
+
+            span {
+                transform: scale(1.15);
+            }
+        }
+    }
+
+}

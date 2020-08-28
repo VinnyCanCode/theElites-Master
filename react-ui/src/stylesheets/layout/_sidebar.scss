@@ -1,0 +1,77 @@
+.sidebar {
+    height: 10vh;
+    grid-column: col-start / mid;
+
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 5rem;
+    }
+
+    @media only screen and (max-width: $bp-phone-1) {
+        margin-bottom: 10rem;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        height: 7vh;
+        width: 100%;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            width: 180%;
+        }
+    }
+
+    &__item,
+    &__selectedItem {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        cursor: pointer;
+
+        margin: 1rem 0rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+
+        border: $itemCardBorder;
+        // border-color: bu/;
+        padding: .5rem;
+
+        transition: .2s font-weight ease-in-out;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        &:hover {
+            color: white;
+            background-color: $color-gold;
+        }
+
+    }
+
+    &__selectedItem {
+        color: white;
+        border-color: black;
+        border-width: 1.1px;
+        background-color: $color-skyblue-1;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+
+    &__icon svg {
+        margin-right: 1rem;
+
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+}

@@ -1,0 +1,107 @@
+@keyframes openMenu {
+    0% {
+        opacity: 0;
+        background-color: white;
+        // height: 0%;
+        width: 0vw;
+        color: rgba(white, 0.0);
+    }
+
+    10% {
+        height: 5vh;
+        width: 5vw;
+        border-radius: 50%;
+        color: rgba(white, 0.0);
+    }
+
+    30% {
+        height: 15vh;
+        width: 15vw;
+        border-radius: 90% 0%;
+        background-color: $color-grey-dark-2;
+        color: rgba(white, 0.0);
+    }
+
+    50% {
+        border-radius: 0% 80%;
+    }
+
+    90% {
+        color: rgba(white, 0.0);
+    }
+
+    100% {
+        opacity: 1;
+
+        background-color: #141414;
+        height: 100%;
+        width: 60vw;
+        color: white;
+
+        @media only screen and (max-width: $bp-phone-1) {
+            width: 100vw;
+        }
+    }
+}
+
+@keyframes openMenuItems {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes contactTitle {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

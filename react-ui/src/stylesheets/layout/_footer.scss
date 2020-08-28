@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+.footer {
+    grid-column: full-start / full-end;
+
+    background-color: $color-pink-logo;
+    padding: 2rem 4rem;
+
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        &--left {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+
+        &--ig {
+            margin-bottom: 1rem;
+        }
+
+        // &--pin {}
+
+        &--up {
+            transition: transform .2s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        color: white;
+
+        h2 {
+            font-size: 5rem;
+
+            &:last-of-type {
+                margin-bottom: 5rem;
+                text-decoration: underline;
+                cursor: pointer;
+                transition: color .2s ease;
+
+                &:hover {
+                    color: $color-grey-dark-2
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,29 @@
+.wishListHeart {
+    position: absolute;
+    right: 0%;
+    transform: scale(.5);
+    transition: all .2s ease-in-out;
+
+
+
+    &__button {
+        border: none;
+        border-radius: 50%;
+        box-shadow: 0rem .1rem 1rem rgba($color-grey-dark-3, .5);
+        outline: none;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(.9);
+            box-shadow: 0rem .1rem 1rem rgba($color-grey-dark-3, 1);
+        }
+    }
+
+    &__img {
+        height: 4rem;
+        width: 4rem;
+    }
+
+    &__itemDetail {}
+
+}

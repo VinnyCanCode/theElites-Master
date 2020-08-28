@@ -1,0 +1,125 @@
+.contact {
+    grid-column: col-start / col-end;
+
+    display: grid;
+    grid-template-columns: 8rem repeat(4, 1fr) 8rem;
+    grid-template-rows: repeat(6, 1fr);
+    animation: contactTitle 1s ease-in-out;
+    height: 100%;
+
+    @media only screen and (max-width: $bp-largest) {
+        grid-column: full-start / full-end;
+    }
+
+    @media only screen and (max-width: $bp-larger) {
+        grid-template-columns: 5rem repeat(4, 1fr) 5rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        // height: 130vh;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        // height: 150vh;
+    }
+
+
+    &__title {
+        grid-column: 1 / span 6;
+        text-align: center;
+
+        h1 {
+            font-size: 9rem;
+        }
+    }
+
+    &__form {
+        grid-column: 2 / span 4;
+        grid-row: 2 / span 4;
+
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 100;
+            color: $color-grey-dark-1;
+            margin-bottom: 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        grid-column: 1 / span 3;
+
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        input[type=text] {
+            height: 4rem;
+            width: 80%;
+            border: 1px solid rgb(194, 194, 194);
+
+            @media only screen and (max-width: $bp-medium) {
+                width: 100%;
+            }
+        }
+    }
+
+    span {
+        grid-row: 2 / span 5;
+        grid-column: 4 / span 4;
+    }
+
+    textarea {
+        height: 100%;
+        width: 100%;
+        resize: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            height: 25vh;
+        }
+    }
+
+    button {
+        grid-column: 4 / span 5;
+        grid-row: 10 / span 1;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 8rem;
+        }
+    }
+
+    &__info {
+        grid-column: 1 / span 1;
+        grid-row: 10/ span 1;
+        line-height: 4rem;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        @media only screen and (max-width: $bp-larger) {
+            line-height: 3rem;
+            grid-column: 1 / span 3;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+        }
+    }
+}

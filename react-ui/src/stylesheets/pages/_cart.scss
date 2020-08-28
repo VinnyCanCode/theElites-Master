@@ -1,0 +1,226 @@
+.cart {
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: [full-start] 25vw [col-start] 25vw [mid] 25vw [col-end] 25vw [full-end];
+    grid-row-gap: 2rem;
+    margin: 5rem 0rem;
+
+    position: relative;
+
+    @media only screen and (max-width: 1129px) {
+        grid-template-columns: [full-start] 15vw [col-start] 35vw [mid] 35vw [col-end] 15vw [full-end];
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] 5vw [col-start] 45vw [mid] 45vw [col-end] 5vw [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium-2) {
+        grid-template-columns: [full-start] 3vw [col-start] 47vw [mid] 47vw [col-end] 3vw [full-end];
+    }
+
+    button {
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__title {
+        grid-column: col-start / col-end;
+        border-bottom: $itemCardBorder;
+        padding-bottom: 2rem;
+        font-size: 3rem;
+
+    }
+
+    &__item {
+        grid-column: col-start / col-end;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-bottom: $itemCardBorder;
+        padding-bottom: 2rem;
+
+        font-size: 1.5rem;
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 150px 100px 50px;
+            padding: 1rem;
+            height: 100%;
+        }
+
+    }
+
+    &__pic {
+        height: 25rem;
+        overflow: contain;
+
+        img {
+            height: 25rem;
+            width: 20rem;
+        }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-row: 1 / span 2;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__name {
+        font-size: 1.6rem;
+        padding-left: 2rem;
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: 2 /span 3;
+            grid-row: 1 / span 1;
+        }
+    }
+
+    &__delete {
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        color: $color-grey-dark-3;
+        transition: all .2s ease-in-out;
+
+        &:active {
+            transform: translateY(3px);
+        }
+
+        &:hover {
+            background-color: $color-pink-logo-2;
+        }
+    }
+
+    &__quantity {
+        grid-column-gap: 3 / span 1;
+        text-align: end;
+        font-weight: 600;
+
+        h3 {
+            display: inline-block;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: 1 /span 4;
+            grid-row: 3 / span 1;
+            justify-self: start;
+        }
+    }
+
+    &__quantityButton {
+        border: none;
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+
+        transition: transform .2s ease-in-out;
+
+        &:active {
+            transform: translateY(3px);
+        }
+    }
+
+    &__price {
+        font-size: 2rem;
+        text-align: end;
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: 4 /span 1;
+            grid-row: 3 / span 1;
+            justify-self: start;
+        }
+    }
+
+    &__sizeSelect {
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: 2 / span 3;
+            padding-left: 2rem;
+        }
+    }
+
+    &__total {
+        grid-column: mid / col-end;
+        padding: 1rem;
+
+        h2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        &--price {
+            font-size: 2.6rem;
+            font-weight: 500;
+        }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: col-start / col-end;
+        }
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        font-weight: 100;
+    }
+
+    &__purchase {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+
+        background-color: $color-grey-dark-1;
+        border: none;
+        padding: 1.5rem 1rem;
+
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: rgb(21, 21, 21);
+        }
+    }
+
+    &__continue {
+        grid-column: col-start / mid;
+
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        margin-right: 3rem;
+
+        background-color: $color-grey-dark-2;
+        border: none;
+        padding: 1.5rem 1rem;
+
+        position: absolute;
+        bottom: 0;
+
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: $color-gold;
+        }
+
+        @media only screen and (max-width:$bp-phone-1) {
+            grid-column: col-start / col-end;
+            width: 95%;
+            margin: 0rem 1rem;
+            position: initial;
+        }
+    }
+}
