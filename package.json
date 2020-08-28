@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node server",
     "server": "env-cmd -f src/config/dev.env nodemon src/index.js",
     "client": "npm start --prefix react-ui",
     "dev": "concurrently \"npm run server\" \"npm run react-ui\"",
@@ -38,5 +41,15 @@
   "devDependencies": {
     "env-cmd": "^10.1.0",
     "nodemon": "^2.0.4"
-  }
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ]
 }
