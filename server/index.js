@@ -2,7 +2,7 @@ const app = require('./app');
 const express = require('express');
 const path = require('path');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 // app.get('/', (req, res, next) => {
 //   res.setHeader('Content-Type', 'text/html');
