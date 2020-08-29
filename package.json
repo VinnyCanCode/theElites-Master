@@ -11,7 +11,7 @@
     "server": "env-cmd -f src/config/dev.env nodemon src/index.js",
     "client": "npm start --prefix react-ui",
     "dev": "concurrently \"npm run server\" \"npm run react-ui\"",
-    "build": "cd react-ui/ && npm install && npm run build"
+    "heroku-postbuild": "cd react-ui && npm install && npm run build"
   },
   "author": "VinnyCanCode",
   "license": "ISC",
