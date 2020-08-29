@@ -13,10 +13,17 @@ const port = process.env.PORT;
 //   app.use(express.static('client/build'));
 // }
 
-// Handle React routing, return all requests to React app
+// // Handle React routing, return all requests to React app
+// app.get('*', (req, res) => {
+//   res.setHeader('Content-Type', 'text/html');
+//   res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+// });
+
+app.use(express.static(path.join(__dirname, '/../dist')));
+app.use('/server', express.static(__dirname + '/server'));
+app.use(express.static(__dirname));
 app.get('*', (req, res) => {
-  res.setHeader('Content-Type', 'text/html');
-  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port, () => {
