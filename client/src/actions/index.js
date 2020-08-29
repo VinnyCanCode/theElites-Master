@@ -28,7 +28,7 @@ import { hash } from 'bcryptjs';
 
 export const searchTerm = (value) => async (dispatch) => {
   try {
-    const res = await axios.get(`products/all/${value}`);
+    const res = await axios.get(`/products/all/${value}`);
 
     return dispatch({ type: SEARCH_TERM, payload: res.data });
   } catch (error) {
@@ -107,7 +107,7 @@ export const searchResults = (
     // If no gen but there is a searchTerm
     if (gen.length === 0) {
       const res = await axios.get(
-        `products/${searchTerm}?sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
+        `/products/${searchTerm}?sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
       );
 
       return dispatch({ type: SEARCH_RESULTS, payload: res.data });
@@ -116,7 +116,7 @@ export const searchResults = (
     //If searchTerm is 'new' & there is gen
     if (searchTerm === 'new') {
       const res = await axios.get(
-        `products/${gen}?prod=${searchTerm}&sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
+        `/products/${gen}?prod=${searchTerm}&sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
       );
 
       return dispatch({ type: SEARCH_RESULTS, payload: res.data });
@@ -124,7 +124,7 @@ export const searchResults = (
 
     // If there is a searchTerm & gen
     const res = await axios.get(
-      `products/${gen}?prod=${searchTerm}&sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
+      `/products/${gen}?prod=${searchTerm}&sortBy=${sort}&byColor=${colorFilter}&byBrand=${brandFilter}&byPrice=${priceFilter}`
     );
 
     dispatch({ type: SEARCH_RESULTS, payload: res.data });
@@ -135,7 +135,7 @@ export const searchResults = (
 
 export const selectedItem = (routeID) => async (dispatch) => {
   try {
-    const res = await axios.get(`product/${routeID}`);
+    const res = await axios.get(`/product/${routeID}`);
 
     dispatch({ type: SELECTED_ITEM, payload: res.data[0] });
   } catch (error) {
@@ -148,7 +148,7 @@ export const selectedItem = (routeID) => async (dispatch) => {
 
 export const logIn = (email, password) => async (dispatch) => {
   try {
-    const res = await axios.post(`users/login`, {
+    const res = await axios.post(`/users/login`, {
       email: email,
       password: password,
     });
@@ -171,7 +171,7 @@ export const logIn = (email, password) => async (dispatch) => {
 
 export const signUp = (name, email, password) => async (dispatch) => {
   try {
-    const res = await axios.post(`users`, {
+    const res = await axios.post(`/users`, {
       name: name,
       email: email,
       password: password,
@@ -207,7 +207,7 @@ export const getCurrentUser = () => async (dispatch) => {
   );
 
   try {
-    const res = await axios.get(`user`);
+    const res = await axios.get(`/user`);
 
     return dispatch({ type: GET_USER, payload: res });
   } catch (error) {
@@ -217,7 +217,7 @@ export const getCurrentUser = () => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
   try {
-    const res = await axios.post(`users/logout`);
+    const res = await axios.post(`/users/logout`);
 
     localStorage.removeItem('token');
 
@@ -240,7 +240,7 @@ export const getWishList = () => async (dispatch) => {
   );
 
   try {
-    const res = await axios.get(`wishlist`);
+    const res = await axios.get(`/wishlist`);
 
     return dispatch({ type: GET_WISHLIST, payload: res.data });
   } catch (error) {
@@ -260,7 +260,7 @@ export const addToWishlist = (itemId) => async (dispatch) => {
   );
 
   try {
-    const res = await axios.post(`wishlist/${itemId}`);
+    const res = await axios.post(`/wishlist/${itemId}`);
 
     return dispatch({ type: ADD_TO_WISHLIST, payload: res.data });
   } catch (error) {
@@ -280,7 +280,7 @@ export const removeFromWishlist = (itemId) => async (dispatch) => {
   );
 
   try {
-    const res = await axios.patch(`wishlist-remove/${itemId}`);
+    const res = await axios.patch(`/wishlist-remove/${itemId}`);
 
     return dispatch({ type: DELETE_FROM_WISHLIST, payload: res.data });
   } catch (error) {
@@ -302,7 +302,7 @@ export const getCart = () => async (dispatch) => {
     }
   );
   try {
-    const res = await axios.get('cart');
+    const res = await axios.get('/cart');
 
     return dispatch({ type: GET_CART, payload: res.data });
   } catch (error) {
@@ -322,7 +322,7 @@ export const addItemToCart = (itemId) => async (dispatch) => {
   );
 
   try {
-    const res = await axios.post(`cart/${itemId}`);
+    const res = await axios.post(`/cart/${itemId}`);
 
     return dispatch({ type: ADD_ITEM_TO_CART, payload: res.data });
   } catch (error) {
@@ -342,7 +342,7 @@ export const deleteItemFromCart = (itemId) => async (dispatch) => {
   );
 
   try {
-    const res = await axios.patch(`cart/${itemId}`);
+    const res = await axios.patch(`/cart/${itemId}`);
 
     return dispatch({ type: DELETE_ITEM_FROM_CART, payload: res.data });
   } catch (error) {
@@ -364,7 +364,7 @@ export const subtractOneFromQuantity = (itemId) => async (dispatch) => {
   );
 
   try {
-    const res = await axios.patch(`cart/minus/${itemId}`);
+    const res = await axios.patch(`/cart/minus/${itemId}`);
 
     return dispatch({ type: MINUS_ONE_FROM_CART, payload: res.data });
   } catch (error) {
