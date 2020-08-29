@@ -30,6 +30,7 @@ const ProductsPage = (props) => {
   // Change sideBarSearchTerm state by URL
   useEffect(() => {
     dispatch(sideBarSearchTerm(searchByQuery));
+    console.log(searchByQuery);
   }, [searchByQuery]);
 
   let productsMap = (products) => {
