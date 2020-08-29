@@ -41,7 +41,7 @@ const ProductsPage = (props) => {
       );
     }
 
-    return products.map((product) => (
+    return Array.from(products).map((product) => (
       <ItemCard props={product} key={product.name} />
     ));
   };

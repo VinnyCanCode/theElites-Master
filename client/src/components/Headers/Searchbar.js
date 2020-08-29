@@ -27,7 +27,7 @@ const Searchbar = () => {
       return null;
     }
 
-    return searchResults.map((item) => {
+    return Array.from(searchResults).map((item) => {
       return (
         <li
           className="homeHeader__search--item"
