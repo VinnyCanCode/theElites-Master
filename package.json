@@ -8,10 +8,10 @@
   },
   "scripts": {
     "start": "node server",
-    "server": "env-cmd -f src/config/dev.env nodemon src/index.js",
-    "client": "npm start --prefix react-ui",
-    "dev": "concurrently \"npm run server\" \"npm run react-ui\"",
-    "heroku-postbuild": "cd react-ui && npm install && npm run build"
+    "server": "env-cmd -f server/config/dev.env nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "VinnyCanCode",
   "license": "ISC",
@@ -44,7 +44,7 @@
   },
   "cacheDirectories": [
     "node_modules",
-    "react-ui/node_modules"
+    "client/node_modules"
   ],
   "keywords": [
     "node",
