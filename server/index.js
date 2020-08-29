@@ -16,7 +16,10 @@ if (process.env.NODE_ENV === 'production') {
 // Handle React routing, return all requests to React app
 app.get('*', (req, res) => {
   res.setHeader('Content-Type', 'text/html');
-  res.sendFile(path.join(__dirname, './react-ui/build/index.html'));
+
+  const index = path.join(__dirname, 'build', 'index.html');
+
+  res.sendFile(index);
 });
 
 app.listen(port, () => {
