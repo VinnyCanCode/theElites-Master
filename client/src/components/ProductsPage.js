@@ -40,11 +40,7 @@ const ProductsPage = (props) => {
         </div>
       );
     }
-    return (
-      <div>
-        <h1>No products found</h1>
-      </div>
-    );
+
     return products.map((product) => (
       <ItemCard props={product} key={product.name} />
     ));
