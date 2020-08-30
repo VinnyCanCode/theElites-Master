@@ -23,7 +23,7 @@ exports.userLogIn = async (req, res, next) => {
     const token = await user.generateAuthToken();
     res.send({ user, token });
   } catch (error) {
-    res.status(400).send();
+    res.status(400).send('You are here');
   }
 };
 
