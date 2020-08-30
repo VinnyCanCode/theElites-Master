@@ -11,4 +11,8 @@
     @media only screen and (max-width: $bp-phone-1) {
         grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
     }
+
+    @media only screen and (max-width: $bp-phone-2) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    }
 }

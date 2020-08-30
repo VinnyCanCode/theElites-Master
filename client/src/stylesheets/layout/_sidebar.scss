@@ -12,6 +12,11 @@
         margin-bottom: 10rem;
     }
 
+    @media only screen and (max-width: $bp-phone-2) {
+        grid-column: col-start / col-end;
+        height: 100%;
+    }
+
 
     &__list {
         display: flex;
@@ -24,6 +29,11 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
             width: 180%;
+        }
+
+        @media only screen and (max-width: $bp-phone-2) {
+            grid-template-columns: repeat(auto-fill, minmax(50px, 70px));
+            width: 100%;
         }
     }
 

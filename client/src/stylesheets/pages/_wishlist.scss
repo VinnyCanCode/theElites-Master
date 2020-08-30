@@ -5,7 +5,7 @@
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
         grid-gap: 5rem;
         justify-content: center;
         align-items: center;
@@ -13,6 +13,11 @@
         @media only screen and (max-width: $bp-phone-1) {
             grid-template-columns: repeat(auto-fill, minmax(350px, 350px));
         }
+
+        @media only screen and (max-width: $bp-phone-2) {
+            grid-template-columns: repeat(auto-fill, minmax(0px, 350px));
+        }
+
     }
 
     &__title {
@@ -27,5 +32,11 @@
         &:not(:last-child) {
             margin-right: 5rem;
         }
+    }
+
+    &__none {
+        width: 100%;
+        text-align: center;
+        grid-column: 1 / -1;
     }
 }

@@ -46,7 +46,7 @@ const WishlistItems = (...itemList) => {
   const wishListMap = () => {
     if (wishListItems === 'User wishlist is empty') {
       return (
-        <div className="orders">
+        <div className="wishlist__none">
           <p>No Items Added To Your Wishist</p>
         </div>
       );

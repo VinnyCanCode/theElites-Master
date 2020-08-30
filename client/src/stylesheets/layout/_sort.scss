@@ -32,6 +32,13 @@
         left: 0;
     }
 
+    @media only screen and (max-width: $bp-phone-2) {
+        width: 150px;
+        top: 23.5px;
+        left: -12.9rem;
+        border-radius: 5px 0px 5px 5px;
+    }
+
     h2 {
         margin-bottom: 1rem;
     }

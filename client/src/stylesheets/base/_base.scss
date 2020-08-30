@@ -24,6 +24,10 @@ html {
     @media only screen and (max-width: $bp-medium) {
         font-size: 56.25%; // 8px / 16px = 50%
     }
+
+    @media only screen and (max-width: $bp-phone-2) {
+        font-size: 37.5%; // 8px / 16px = 50%
+    }
 }
 
 a,

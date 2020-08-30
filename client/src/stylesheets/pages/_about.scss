@@ -162,13 +162,21 @@
 
         &>:not(:last-child) {
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: $bp-larger) {
+                margin-bottom: 0rem;
+            }
         }
 
         @media only screen and (max-width: $bp-larger) {
-            margin-top: 10rem;
+            height: 100%;
+            margin-top: 0rem;
+            margin-bottom: 10rem;
+            text-align: right;
             grid-row: 3 / span 1;
             grid-column: 1 / span 4;
         }
+
     }
 
     &__ad {
@@ -203,6 +211,10 @@
                 grid-column: 1 / span 4;
                 grid-row: 4 / span 1;
                 background: url('../../imgs/aboutad-2.jpg') 0% 35%/100% no-repeat;
+            }
+
+            @media only screen and (max-width: $bp-phone-2) {
+                height: 60vh;
             }
         }
 
