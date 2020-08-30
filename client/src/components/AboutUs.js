@@ -66,15 +66,16 @@ const AboutUs = () => {
 
       <section className="aboutGrid aboutGrid__sectionThree">
         <div className="aboutGrid__yourStory">
-          <h1>Competitive Fire</h1>
-          <h3>"Until It's Empty"</h3>
+          <h1>Design Story</h1>
+          <h3>Making a New Way to Look</h3>
           <p>
-            In every era, there are those that follow trends, those that set the
-            trends, and those that compete with those that set the trends. From
-            the outset of this venture we vowed to be the ones to always set the
-            trends. We don't care to follow nor care to compete with other
-            trendsetters. We compete with ourselves. Until there's nothing more
-            to give. Until the fire is empty.
+            The days of being forced to look and dress in a specific is coming
+            to an end, and a new way to look in which people can wear styles of
+            their choosing has come to the fore. The way that we live is
+            constantly changing, and we believe that to meet the demands of our
+            evolving world, a new kind of brand is necessary. Just as fashion
+            changes with time, so too do the other creative products that we
+            implement into our lives.
           </p>
         </div>
         <div className="aboutGrid__ad--4"></div>
@@ -102,12 +103,13 @@ const AboutUs = () => {
           </div>
           <h1 className="aboutGrid__sectionSix--name">TheElites</h1>
           <p>
-            We named our brand 201˚. The average human field of vision is said
-            to be 200 degrees. We would like to expand that field of vision, if
-            only just a little bit, and change people's perspective. We want to
-            apply that small 1˚ expansion to create entirely new "phenomena" in
-            the spaces we inhabit. This idea is central to our naming, logo, and
-            our products.
+            We named our brand theElites. Not because we think we are better
+            than or even aim for that. We would like to expand our capabilities,
+            our vision, our efforts, our very way of living the the highest
+            pinnacle that we can. We want to change the wolrd around us for the
+            better - even if only by 1% - to create entirely new "phenomena" in
+            the way that we look & live. This idea is central to our naming,
+            logo, and our products.
           </p>
         </div>
 

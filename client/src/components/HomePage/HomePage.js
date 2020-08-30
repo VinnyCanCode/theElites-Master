@@ -85,14 +85,14 @@ const HomePage = () => {
         <div className="homePage__text homePage__text--rowTwo">
           <h2>Slight Differences Can Trigger Creativity</h2>
           <p>
-            A unique space can be created if we opt to surround ourselves with
-            superbly designed, user-friendly furniture, as opposed to
-            nondescript, ordinary furniture. It is amazing to see how even the
-            smallest touches of ingenuity can transform an area into a
-            surprisingly refreshing space. Changing our perspective by just that
-            extra one degree and creating that "little bit of fun" to be enjoyed
-            every day can ultimately lead to a sweeping transformation of an
-            entire space.
+            A unique fit can be created if we opt to surround ourselves with
+            superbly designed, user-friendly fashion, as opposed to nondescript,
+            ordinary clothing. It is amazing to see how even the smallest
+            touches of ingenuity can transform somone into a surprisingly
+            refreshing new life. Changing our perspective by just that extra one
+            degree and creating that "little bit of fun" to be enjoyed every day
+            can ultimately lead to a sweeping transformation of an entire
+            person.
           </p>
         </div>
       </div>
@@ -104,15 +104,14 @@ const HomePage = () => {
         <div className="homePage__text homePage__text--rowThree">
           <h2>Creations By theElites</h2>
           <p>
-            There are many instances where direct communication can result in
-            unforeseen breakthroughs or where a shared thinking and creative
-            process can lead to the emergence of brand-new ideas. 201˚ came
-            about in an effort to improve communication among people, thereby
-            leading to new business opportunities, and to accommodate
-            diversified ways of working. In the process of designing a wide
-            range of spaces, our furniture has evolved organically to respond to
-            the needs of people who want to work in a particular way and create
-            their own unique work spaces.
+            A unique fit can be created if we opt to surround ourselves with
+            superbly designed, user-friendly fashion, as opposed to nondescript,
+            ordinary clothing. It is amazing to see how even the smallest
+            touches of ingenuity can transform somone into a surprisingly
+            refreshing new life. Changing our perspective by just that extra one
+            degree and creating that "little bit of fun" to be enjoyed every day
+            can ultimately lead to a sweeping transformation of an entire
+            person.
           </p>
         </div>
         <div className="homePage__img homePage__img--rowThreeTwo">
@@ -128,16 +127,16 @@ const HomePage = () => {
           <img src={ImgFour} alt="" />
         </div>
         <div className="homePage__text homePage__text--rowTwo">
-          <h2>Furniture that Interior Designer Dreams Up</h2>
+          <h2>clothing that Designer Dreams Up</h2>
           <p>
-            DRAFT is a Tokyo-based design firm specializing in the spatial
-            design of offices, retail stores and various commercial buildings.
-            After determining the issues that our clients face and visualizing
-            the type of people involved, we then create innovative, brand-new
-            designs. Our goal is to ensure that all people affiliated with our
-            design spaces feel both pleasure and comfort, thereby generating a
+            theElites is an American-based design firm specializing in the
+            design of clothing for people of all different lifestyles and
+            backgrounds. After determining the issues that our clients face and
+            visualizing the type of people involved, we then create innovative,
+            brand-new designs. Our goal is to ensure that all people affiliated
+            with our design feel both pleasure and comfort, thereby generating a
             cycle of happiness. We hope to give concrete form to the interesting
-            furniture ideas that everyone dreams up.
+            fashion ideas that everyone dreams up.
           </p>
         </div>
       </div>
@@ -155,11 +154,11 @@ const HomePage = () => {
               New products inspired by the changing working-style and times.
             </h2>
             <p>
-              201˚ was designed to create a more flexible and free approach to
-              people’s ways of working. In this age, people are called on to be
-              creative, regardless of their occupations and industries.
+              theElites was designed to create a more flexible and free approach
+              to people’s ways of working. In this age, people are called on to
+              be creative, regardless of their occupations and industries.
               Achieving change in workplace and work styles is essential to
-              business today. Through 201˚, we aim to create a new way of
+              business today. Through theElites, we aim to create a new way of
               working that is not bound by convention.
             </p>
           </div>
