@@ -317,6 +317,10 @@
 
     &__sectionThree {
         height: 68vh;
+
+        @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+            height: 85vh;
+        }
     }
 
     &__yourStory {

@@ -69,6 +69,10 @@
             @media only screen and (max-width:$bp-phone-1) {
                 height: 75vh;
             }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                height: 100%;
+            }
         }
 
         &--two {
@@ -80,6 +84,10 @@
                 justify-self: center;
             }
 
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                height: 90vh;
+            }
+
         }
 
         &--three {
@@ -89,6 +97,10 @@
                 height: 100vh;
                 width: 80%;
                 justify-self: center;
+            }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                height: 150vh;
             }
         }
 
@@ -125,6 +137,10 @@
 
                 margin-bottom: -5rem;
             }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                margin-bottom: 5rem;
+            }
         }
 
         &--rowTwo {
@@ -143,6 +159,10 @@
             @media only screen and (max-width:$bp-phone-1) {
                 height: 80vh;
                 padding: 2rem 5rem 2rem 5rem;
+            }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                margin-bottom: 3rem;
             }
 
         }
@@ -228,6 +248,10 @@
         &--rowOne {
             height: 50vh;
             grid-column: 4 / span 3;
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                margin-bottom: 10rem;
+            }
         }
 
         &--rowTwo,
@@ -258,6 +282,10 @@
 
             @media only screen and (max-width:$bp-phone-1) {
                 height: 80vh;
+            }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                margin-bottom: 5rem;
             }
         }
 
@@ -291,6 +319,11 @@
                 img {
                     transform: scale(1.1)
                 }
+            }
+
+            @media only screen and (min-width: $bp-phone-1) and (max-width: $bp-phone-width-2) and (orientation : landscape) {
+                height: 100%;
+                margin-bottom: 2rem;
             }
         }
 
