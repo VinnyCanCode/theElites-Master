@@ -59,7 +59,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    console.log(email, password);
     dispatch(logIn(email, password));
     dispatch(getCart());
   };

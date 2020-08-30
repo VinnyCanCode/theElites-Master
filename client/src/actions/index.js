@@ -154,7 +154,7 @@ export const logIn = (email, password) => async (dispatch) => {
     });
 
     // Set Auth to header
-    await axios.get('http://localhost:3000', {
+    await axios.get('/', {
       headers: { Authorization: `Bearer ${res.data.token}` },
     });
     // Set Token to local storage
@@ -178,7 +178,7 @@ export const signUp = (name, email, password) => async (dispatch) => {
     });
 
     // Set Auth to header
-    await axios.get('http://localhost:3000', {
+    await axios.get('/', {
       headers: { Authorization: `Bearer ${res.data.token}` },
     });
     // Set Token to local storage
