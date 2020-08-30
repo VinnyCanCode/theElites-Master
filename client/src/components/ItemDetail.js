@@ -22,6 +22,14 @@ const ItemDetail = (props) => {
   const cart = useSelector((state) => state.cart);
   const [mainPicture, setMainPicture] = useState();
 
+  if (window.performance) {
+    if (performance.navigation.type == 1) {
+      alert('This page is reloaded');
+    } else {
+      alert('This page is not reloaded');
+    }
+  }
+
   // Control component level state CSS and Words
   const [cartButtonClass, setCartButtonClass] = useState(
     'button button__itemDetail'

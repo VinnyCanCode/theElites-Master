@@ -13,6 +13,14 @@ const ProductsPage = (props) => {
   const brandFilter = useSelector((state) => state.brandFilter);
   const priceFilter = useSelector((state) => state.priceFilter);
 
+  if (window.performance) {
+    if (performance.navigation.type == 1) {
+      alert('This page is reloaded');
+    } else {
+      alert('This page is not reloaded');
+    }
+  }
+
   // Change ProductPage state by URL
   useEffect(() => {
     dispatch(
